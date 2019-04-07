@@ -10,8 +10,6 @@ def lambda_handler(event, context):
 			move_bot_forward(intent)
 			return build_response('Moving bot to target position')
 
-		# Default intents provided by Amazon
-		# We need to implement them
 		elif intent['name'] == 'AMAZON.FallbackIntent':
 			return build_reponse('I didn\'t understand that')
 		elif intent['name'] == 'AMAZON.HelpIntent':
